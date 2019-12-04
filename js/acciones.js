@@ -1,5 +1,6 @@
 ﻿// JavaScript Document
 $(document).ready(function(e) {
+	document.addEventListener("deviceready",function(){
 var abecedario=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 		var encontradas=0;
 		var oportunidades=6;
@@ -220,4 +221,5 @@ alert (palabraoculta);
 			}
 		}
 	});
+	});//dev ready
 });//ready
