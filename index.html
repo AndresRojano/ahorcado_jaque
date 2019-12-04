@@ -1,0 +1,141 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+	<head> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+		<title>Ahorcado</title>
+
+		<!--grupo CSS-->
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/estilo.css"/> 
+        <link rel="stylesheet" href="css/font-awesome.min.css.css"/>
+
+		<!--grupo JavaScript-->
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/acciones.js" type="text/javascript"></script>
+		<!--  <script src="phonegap.js" type="text/javascript"></script> -->
+	</head>
+
+	<body>
+		<!-- principal -->
+		<div data-role="page" id="principal" style="background-image: url(images/images.jpeg);">
+		<br>
+		<br>
+			<div style="text-align: center;">
+				<div>
+					<a class="botones" href="#opciones_juego" style="color: black; font-weight: bold; border: 2px solid black;" > Configuracion del juego </a>
+				</div>
+				<br>
+				<br>
+				<div>
+					<a class="botones" href="#jugar" style="color: black; font-weight: bold; border: 2px solid black;"> ¡Jugar! </a>
+				</div>
+			</div>
+		</div>
+        
+        
+        
+        
+        <div data-role="page" id="jugar" style="background-color:#999; font-size:32 px;"
+        style="background-image: url(images/images.jpeg);">
+		
+			<div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#principal" class="ui-btn" id="principal_j"> Principal </a>
+				<h2> Ahorcado - 5G </h2>
+				<a href="#" id="btn_comenzar" class="ui-btn"> Comenzar </a>
+			</div>
+			
+			<div role="main" class="ui-content">
+				<div id="contenedor_imagen" style="text-align: center;">
+					<img id="imagen" src="">
+				</div>
+				
+				<div id="palabra" style="text-align:center; letter-spacing:10px;">
+					&nbsp;
+				</div>
+                <div id="palabra_oculta" style="text-align:center; letter-spacing:10px; display:none;">
+					&nbsp;
+				</div>
+				<br>
+                <br>
+				<div id="contenedor_interfaz" style="text-align:center; font-size:24px;">
+					<div>
+						<div id="palabra_error" style="display: none;">
+							&nbsp;
+						</div>
+						<div id="contenedor_letras">
+							<div id="anterior">
+							<i class="fa fa-chevron-left"></i>
+							</div>
+							
+							<div id="actual">
+							
+							</div>
+							
+							<div id="siguiente">
+							<i class="fa fa-chevron-right"></i>
+							</div>
+						</div>
+                        <div id="perdio_j" style="display:none;">
+                        <h1> Perdio, oprime principal para volver a jugar! </h1>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+				<h3>
+					Palabras encontradas: <span id="encontradas"> 0 </span>
+				</h3>
+			</div>
+		</div>
+  
+		<div data-role="page" id="opciones_juego" > 
+          
+			<div data-role="header">
+            	<h1> Configuracion del juego </h1>
+			</div>
+
+			<div role="main" class="ui-content">
+			
+				<div id="btnip">
+					<input type="text" id="textoip" placeholder="Direccion IP" pattern="[0-9.]{,15}">
+					<input type="button" class="ui-btn" id="btn-buscar-colecciones" value="Buscar colecciones">
+				</div>
+				
+				<div id="cargando" style="text-align:center;">
+					<img src="images/ajax-loader.gif">
+				</div>
+				
+				<div id="opciones">
+					<h2> Selecciona una coleccion: </h2>
+					<select id="option_coleccion" name="option_coleccion">
+					</select>
+					<h2> Dificultad: </h2>
+					<select id="option_cantidad" name="option_cantidad">
+						<option value="5"> ¡FACIL! - 5 palabras </option>
+						<option value="10"> Normal. - 10 palabras </option>
+						<option value="15"> Dificil!!! - 15 palabras</option>
+					</select>
+					<input type="button" class="ui-btn" id="btn-enviar" value="Seleccionar">
+				</div>
+			</div>
+			<br>
+			<br>
+			<div style="text-align: center;">
+					<a class="botones" href="#principal" style="color: black; font-weight: bold; border: 2px solid black;"> Menu </a>
+			</div>
+			<br>
+			<br>
+			<div data-role="footer">
+			
+			</div>
+		</div>
+	</body>
+</html> 
+
+
